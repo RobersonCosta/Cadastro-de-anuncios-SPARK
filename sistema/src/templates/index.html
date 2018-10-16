@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h2 align="center">Tela de listagem de pessoas</h2>
+        </div>
+        <div class="row" >
+            <form action="/delete_multiple" method="post">
+                <table  style="width:60%;" class="table table-hover" align="center">
+                    {{#pessoas}}
+                    <tr>        
+                        <td> <input type="checkbox" name="id" value="{{id}}"> </td>
+                        <td> {{nome}} </td> 
+                        <td> {{email}} </td>                         
+                        <td>{{telefone}}</td>
+                        <td align="right"> 
+                            <a href="/delete/{{id}}" class="btn btn-default"> Deletar </a>
+                            <a href="/screen_update/{{id}}" class="btn btn-default"> Editar </a>
+                            <a href="/listAnuncio/{{id}}" class="btn btn-default">Listar Anuncios</a>
+                        </td> 
+
+                    </tr>     
+                    {{/pessoas}}
+                </table>
+                <div align="center">
+                    <input class="btn btn-danger" type="submit" value="Excluir Multiplo (selecione os checkboxes)">
+                    </form> <br<br><br><br>            
+                    <a href="/screen_insert" class="btn btn-default"> Adicionar </a>
+                </div>
+        </div>
+    </body>
+</html>
+

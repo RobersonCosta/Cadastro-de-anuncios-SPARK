@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Pessoa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h2 align="center">Editando pessoa</h2>
+        </div>
+        <div style="width:40%; height:100%; margin: 0 auto; " id="cadastro">
+            <form role="form" action="http://localhost:4567/update/" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Nome </label> 
+                    <div class="col-sm-10">
+                        <input type="text" value="{{nome}}" name="nome" class="form-control" placeholder="Nome">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Email </label>
+                    <div class="col-sm-10">
+                        <input type="text"  value="{{email}}" name="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Telefone </label>
+                    <div class="col-sm-10">
+                        <input type="text"  value="{{telefone}}" name="telefone" class="form-control" placeholder="Telefone">
+                    </div>
+                </div>                
+                <input type="hidden" value="{{id}}" name="id">
+                <div class="form-group" style="padding-left:35%">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" align="center"> Concluir </button>  
+                    </div>     
+                </div>     
+            </form>
+        </div>
+    </body>
+</html>
+
+

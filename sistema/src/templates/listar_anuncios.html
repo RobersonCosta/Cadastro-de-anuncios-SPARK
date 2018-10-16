@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listagem de Anúncios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h2 align="center">Tela de listagem de anúncios</h2>
+        </div>
+        <div class="row" >
+            <table  style="width:60%;" class="table table-hover" align="center">
+                {{#anuncios}}
+                <tr>        
+                    <td>{{descricao}}</td> 
+                    <td>{{valor}}</td>
+                    <td align="right"> 
+                        <a href="/deleteAnuncio/{{id}}" class="btn btn-default"> Deletar </a>
+                        <a href="/screen_updateAnuncio/{{id}}" class="btn btn-default"> Editar </a>
+                    </td> 
+
+                </tr>     
+                {{/anuncios}}
+            </table>
+            <div align="center">
+                <a href="/screen_insertAnuncio/{{id_pessoa}}" class="btn btn-default"> Adicionar </a>                
+                <br<br><br><br> 
+                <a href="/" class="btn btn-default"> Voltar </a>
+            </div>
+        </div>
+    </body>
+</html>
+
